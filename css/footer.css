@@ -1,0 +1,91 @@
+.footer {
+    background-color: var(--total-black);
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+
+/* Футер лого + кнопки соц.сетей */
+.footer__top {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 36px;
+}
+
+.footer__top img {
+    width: 233px;
+    min-height: 61px;
+}
+
+/* Общий блок со ссылками */
+.footer__links {
+    display: flex;
+    gap: 80px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+}
+
+/* Заголовки футера */
+.footer__links-header {
+    color: var(--color-text-additional);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    display: flex;
+    margin-bottom: 16px;
+}
+
+/* Стиль ссылок в блоке */
+.footer__links-block a {
+    color: var(--color-text);
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.footer__links-block a:hover {
+    color: var(--color-text-caption);
+    transition: all var(--transition);
+}
+
+.footer__links-block ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: max-content;
+}
+
+/* Стиль для реквизитов */
+.footer__links-right ul {
+    color: var(--color-text-caption);
+}
+
+/* Сopyright */
+.footer-caption {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--color-text-caption);
+}
+
+/* Адаптив */
+@media (max-width:640px) {
+    .footer {
+        padding-top: 36px;
+    }
+
+    .footer__links {
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+
+    .footer__top {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 40px;
+    }
+
+    .footer__links-header {
+        margin-bottom: 12px;
+    }
+}

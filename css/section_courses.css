@@ -1,0 +1,42 @@
+.section-courses {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.section-courses__headline {
+    margin-bottom: 48px;
+}
+
+.section-courses__chips {
+    margin-bottom: 32px;
+}
+
+@media (max-width:960px) {
+    .section-courses {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
+
+@media (max-width:640px) {
+    .section-courses {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+}
+
+@media (max-width:480px) {
+    .section-courses {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        gap: 24px;
+    }
+
+    .section-courses__headline {
+        margin-bottom: 24px;
+    }
+
+    .section-courses__chips {
+        margin-bottom: 24px;
+    }
+}

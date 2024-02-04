@@ -1,0 +1,343 @@
+/* Основная кнопка*/
+
+.button {
+    padding: 16px 32px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+    border: 1px solid transparent;
+    color: var(--color-text);
+    transition: all var(--transition);
+    min-width: max-content;
+}
+
+.button--primary {
+    background-color: var(--color-primary);
+}
+
+.button--primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.button--secondary {
+    background-color: none;
+    border-color: var(--border-color);
+}
+
+.button--secondary:hover {
+    background-color: var(--bg-additional-color);
+}
+
+/* Кнопка соц.сетей */
+.social-media-buttons {
+    display: flex;
+    gap: 24px;
+    border-radius: 6px;
+}
+
+.social-media-buttons svg {
+    border-radius: 6px;
+    transition: all var(--transition);
+}
+
+.social-media-buttons svg:hover {
+    background-color: var(--bg-additional-color);
+}
+
+/* Заголовок блока */
+.headline {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.headline__subtitle {
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--color-text-additional);
+}
+
+.headline__title {
+    font-size: 46px;
+    line-height: 55px;
+}
+
+/* Всплывающее меню */
+
+.mobile-menu {
+    position: fixed;
+    right: 0;
+    top: 100px;
+    background-color: red;
+    height: 100vh;
+    z-index: 5;
+    transform: translateX(100%);
+    transition: all var(--transition);
+}
+
+.mobile-menu--open {
+    transform: translateX(0);
+}
+
+
+/* Элемент статьи */
+.blog-item {
+    width: 100%;
+    background-color: var(--bg-secondary-color);
+    border-radius: 10px;
+    padding: 35px 40px 25px 32px;
+}
+
+.blog-item__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.blog-item__content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 774px;
+}
+
+.blog-item__content-top {
+    display: flex;
+    column-gap: 32px;
+    align-items: center;
+    row-gap: 8px;
+
+}
+
+.blog-item__content-top-data {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    color: var(--color-text-caption);
+    font-size: 16px;
+    line-height: 19px;
+
+}
+
+.blog-item__content-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+}
+
+
+.blog-item__content-text {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* Chip */
+
+.chips {
+    display: flex;
+    gap: 24px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    margin-left: -24px;
+    margin-right: -24px;
+    padding: 0 24px;
+}
+
+
+.chips::-webkit-scrollbar {
+    display: none;
+}
+
+.chip {
+    font-family: 'Fira Sans', sans-serif;
+    color: var(--color-text);
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 10px;
+    border: var(--border);
+    padding: 8px 16px 8px 16px;
+    transition: all var(--transition);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.chip--selected {
+    background-color: var(--color-primary) !important;
+    border: none;
+}
+
+.chip:hover {
+    background-color: var(--bg-secondary-color);
+}
+
+/* Блок "О нас" */
+.about-us__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px;
+    justify-content: space-between;
+}
+
+/* Карточки с инфо */
+.card {
+    background-color: var(--bg-additional-color);
+    border-radius: 10px;
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    padding: 48px 24px;
+}
+
+.card__title {
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 55px;
+    text-align: center;
+    width: 100%;
+}
+
+.card__caption {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+}
+
+/* Карточки с рейтингом */
+
+.card__rating {
+    display: flex;
+    gap: 24px;
+    align-items: flex-end;
+    padding: 24px 32px;
+}
+
+.card__rating-number {
+    font-size: 54px;
+    line-height: 65px;
+}
+
+.card__rating-stars {
+    display: flex;
+    gap: 8px;
+}
+
+.card__rating-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+/* Адапитив */
+@media (max-width:1020px) {
+    .blog-item__content {
+        margin-bottom: 16px;
+        width: 100%;
+    }
+
+    .blog-item__content-button {
+        width: 100%;
+    }
+
+    .about-us__grid {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 960px) {
+
+    .mobile-menu {
+        width: 50%;
+    }
+
+    .about-us__grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .card__content {
+        gap: 12px;
+        align-items: center;
+        padding: 32px 24px;
+    }
+
+    .card__rating {
+        justify-content: center
+    }
+}
+
+@media (max-width:480px) {
+
+    .headline__title {
+        font-size: 34px;
+        line-height: 41px;
+    }
+
+    .button {
+        padding: 12px 24px;
+    }
+
+    .mobile-menu {
+        width: 100%;
+    }
+
+    .blog-item {
+        padding: 24px 16px;
+    }
+
+    .blog-item__content-top-data {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .blog-item__content-top-data span {
+        min-width: max-content
+    }
+
+    .blog-item__content-top {
+        column-gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .blog-item__content-title {
+        font-size: 21px;
+        line-height: 25px;
+    }
+
+    .chips {
+        color: var(--color-text-caption);
+        gap: 16px;
+    }
+
+    .about-us__grid {
+        gap: 16px;
+    }
+
+    .card__content {
+        gap: 0;
+        padding: 16px 20px;
+    }
+
+    .card__title {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .card__caption {
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+
+     .card__rating-number {
+    font-size: 44px;
+    line-height: 53px;
+        }
+}

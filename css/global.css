@@ -1,0 +1,55 @@
+:root {
+    --color-primary: #6C38CC;
+    --color-text: #FAFAFA;
+    --color-text-additional: #E47AD5;
+    --color-text-caption: #AFB2BF;
+    --bg-main-color: #16171D;
+    --bg-secondary-color: #1E1F29;
+    --bg-additional-color: #2E2D3D;
+    --total-black: #101114;
+    --border-color: #4D5064;
+    --border: 1px solid #4D5064;
+    /* --shadow: 0px 4px 30px 15px #0000004D; */
+    --gradient-color: linear-gradient(93.33deg, #D77BE6 9.26%, #BE63E6 42.32%, #6C38CC 104.58%);
+    --box-shadow: 0px 4px 30px 15px rgba(0, 0, 0, 0.30);
+    --color-primary-hover: #452481;
+    --transition: 0.3s ease-in-out;
+}
+
+body {
+    color: var(--color-text);
+    background-color: var(--bg-main-color);
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.gradien-text {
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.main-container {
+    max-width: calc(1220px + 48px);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.paragraph {
+    font-size: 18px;
+    line-height: 27px;
+    width: 787px
+}
+
+@media (max-width:1020px) {
+    .paragraph {
+        width: 100%;
+    }
+}
